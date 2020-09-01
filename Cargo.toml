@@ -8,9 +8,9 @@ build = "build.rs"
 
 [dependencies]
 web-view = { git = "https://github.com/Blakeinstein/web-view/"}
-rust-embed = "5.5.1"
-serde_json = "1.0.56"
-serde = { version = "1.0.114", features = ["derive"] }
+rust-embed = "5.6.0"
+serde_json = "1.0.57"
+serde = { version = "1.0.115", features = ["derive"] }
 glob = "0.3.0"
 directories = "3.0.1"
 tinyfiledialogs = "3.3.10"
@@ -24,4 +24,3 @@ FileDescription = "A light weight scratch pad for developers"
 OriginalFilename = "Bloop.EXE"
 ProductVersion = "0.1.0"
 LegalCopyright = "© 2020 Blaine"
-

@@ -13,7 +13,7 @@ use serde_json;
 use std::collections::HashMap;
 
 #[derive(RustEmbed)]
-#[folder = "dist/"]
+#[folder = "src/scripts/"]
 pub struct Asset;
 
 #[derive(Serialize, Deserialize)]
@@ -71,7 +71,6 @@ fn append_script(webview: &mut WebView<()>, script_list: &mut HashMap<String, Sc
             Ok(())
         }
     }
-    
 }
 
 pub fn build_scripts(webview: &mut WebView<()>, script_list: &mut HashMap<String, Script>) -> WVResult{
@@ -81,7 +80,6 @@ pub fn build_scripts(webview: &mut WebView<()>, script_list: &mut HashMap<String
         append_script(webview, script_list, script_string, script.as_ref())?
     }
     if let Some(user_dir) = UserDirs::new() {
-        println!("user_dir: {:#?}", user_dir);
         let bloop_dir = user_dir.document_dir().unwrap().join("bloop");
         if bloop_dir.exists() {
             let script_path = &bloop_dir.join("**").join("*.js");

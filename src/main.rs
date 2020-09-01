@@ -19,15 +19,15 @@ impl Bloop {
         }
     }
     fn exec(&mut self, html_content: &str) {
-        let mut maximized_state = false;
+        // let mut maximized_state = false;
 
         let view = builder()
         .title("Bloop")
         .content(Content::Html(&html_content))
         .size(900, 400)
         .frameless(true)
-        .resizable(true)
-        .debug(true)
+        .resizable(false)
+        .debug(false)
         .user_data(())
         .invoke_handler(|webview, arg|  {
             match arg {
