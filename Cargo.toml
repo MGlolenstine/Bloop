@@ -7,7 +7,7 @@ build = "build.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-web-view = { git = "https://github.com/Blakeinstein/web-view/" , features = ["edge"]}
+web-view = { git = "https://github.com/Blakeinstein/web-view/"}
 rust-embed = "5.5.1"
 serde_json = "1.0.56"
 serde = { version = "1.0.114", features = ["derive"] }

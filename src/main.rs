@@ -32,16 +32,16 @@ impl Bloop {
         .invoke_handler(|webview, arg|  {
             match arg {
                 "exit" => webview.exit(),
-                "maximize" => {
-                    maximized_state = !maximized_state;
-                    webview.set_maximized(maximized_state);
-                },
-                "minimize" => {
-                    webview.set_minimized();
-                },
-                "drag_intent" => {
-                    webview.drag_intent();
-                },
+                // "maximize" => {
+                //     maximized_state = !maximized_state;
+                //     webview.set_maximized(maximized_state);
+                // },
+                // "minimize" => {
+                //     webview.set_minimized();
+                // },
+                // "drag_intent" => {
+                //     webview.drag_intent();
+                // },
                 "doc_ready" => {
                     scripts::build_scripts(webview, &mut self.script_list)?;
                 },
