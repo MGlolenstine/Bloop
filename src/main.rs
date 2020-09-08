@@ -26,8 +26,8 @@ impl Bloop {
         .content(Content::Html(&html_content))
         .size(900, 400)
         .frameless(true)
-        .resizable(false)
-        .debug(false)
+        .resizable(true)
+        .debug(true)
         .user_data(())
         .invoke_handler(|webview, arg|  {
             match arg {
